@@ -1,6 +1,5 @@
-import 'package:artichaut_app/utils/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
 
 class MyHomepage extends StatelessWidget {
   const MyHomepage({Key? key}) : super(key: key);
@@ -8,13 +7,7 @@ class MyHomepage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Theme.of(context).colorScheme.background,
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.pushNamed(context, ConstantsApp.ACCOUNT_ROUTE);
-        },
-        child: const Text('Account page'),
-      ),
+      color: Colors.green,
     );
   }
 }
