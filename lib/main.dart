@@ -1,4 +1,4 @@
-import 'package:campus_hotel_artichaut_frontend/utils/bottom_navigation_bar.dart';
+import 'package:campus_hotel_artichaut_frontend/theme/theme.dart';
 import 'package:campus_hotel_artichaut_frontend/utils/constants.dart';
 import 'package:campus_hotel_artichaut_frontend/views/account.dart';
 import 'package:campus_hotel_artichaut_frontend/views/homepage.dart';
@@ -6,7 +6,6 @@ import 'package:campus_hotel_artichaut_frontend/views/init_app.dart';
 import 'package:campus_hotel_artichaut_frontend/views/rooms.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey =
 GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -51,10 +50,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: myTheme,
       routerConfig: _router,
     );
   }
