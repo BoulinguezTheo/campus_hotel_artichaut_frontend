@@ -31,26 +31,31 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   }
   @override
   Widget build(BuildContext context) {
-    return GNav(
-        backgroundColor: Color.fromRGBO(45, 73, 76, 1),
-        color:  Color.fromRGBO(255, 255, 255, 1),
-        activeColor: Color.fromRGBO(255, 255, 255, 1),
-        tabBackgroundColor: Color.fromRGBO(138, 168, 154, 1),
-        padding: EdgeInsets.all(15),
-        gap: 8,
-        // onTabChange: ,
-        tabs: [
-          GButton(icon: Icons.search, text: ConstantsApp.SEARCH_LABEL),
-          GButton(icon: Icons.home, text: ConstantsApp.HOMEPAGE_LABEL),
-          GButton(icon: Icons.settings, text: ConstantsApp.ACCOUNT_LABEL),
-        ],
-      selectedIndex: _selectedIndex,
-      onTabChange: (index) {
-        setState(() {
-          _selectedIndex = index;
-        });
-        _onTap();
-      },
+    return Container(
+      color: Theme.of(context).primaryColor,
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: GNav(
+            backgroundColor: Theme.of(context).primaryColor,
+            color:  Theme.of(context).colorScheme.background,
+            activeColor: Theme.of(context).colorScheme.background,
+            tabBackgroundColor: Theme.of(context).colorScheme.surface,
+            padding: const EdgeInsets.all(15),
+            gap: 8,
+            tabs: const [
+              GButton(icon: Icons.search, text: ConstantsApp.SEARCH_LABEL),
+              GButton(icon: Icons.home, text: ConstantsApp.HOMEPAGE_LABEL),
+              GButton(icon: Icons.settings, text: ConstantsApp.ACCOUNT_LABEL),
+            ],
+          selectedIndex: _selectedIndex,
+          onTabChange: (index) {
+            setState(() {
+              _selectedIndex = index;
+            });
+            _onTap();
+          },
+        ),
+      ),
     );
 
   }
