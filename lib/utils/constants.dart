@@ -12,5 +12,6 @@ class ConstantsApp {
   static const String RESERVATION_LABEL = "Réserver";
 
   static const String LOGO_ARTICHAUT_PATH = "assets/logo_favicon.svg";
+  static const String LOBBY_PICTURE_PATH = "assets/photo_lobby.jpg";
 
 }

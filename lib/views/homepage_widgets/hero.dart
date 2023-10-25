@@ -18,7 +18,7 @@ class MyHero extends StatelessWidget {
         width: double.infinity,
         decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/photo_lobby.jpg'),
+                image: AssetImage(ConstantsApp.LOBBY_PICTURE_PATH),
                 fit: BoxFit.cover)),
         child: Column(
           children: <Widget>[
