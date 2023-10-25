@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:scaled_size/scaled_size.dart';
 
 ThemeData myTheme = ThemeData(
   scaffoldBackgroundColor: const Color.fromRGBO(199, 207, 202, 1),
@@ -24,5 +26,22 @@ ThemeData myTheme = ThemeData(
     surface: Color.fromRGBO(138, 168, 154, 1),
     onSurface: Color.fromRGBO(0, 0, 0, 1),
   ),
+  textTheme: const TextTheme(
+    displayLarge: TextStyle(
+      color: Color.fromRGBO(255, 255, 255, 1),
+      fontSize: 40,
+      fontFamily: 'PlayfairDisplay',
+    ),
+    labelMedium: TextStyle(
+      color: Color.fromRGBO(0, 0, 0, 1),
+      fontSize: 20,
+      fontFamily: 'PlayfairDisplay',
+    )
+
+  ),
+    cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
+      primaryColor: Color.fromRGBO(224, 198, 77, 1),
+      applyThemeToAll: true,
+    )
 );
 
