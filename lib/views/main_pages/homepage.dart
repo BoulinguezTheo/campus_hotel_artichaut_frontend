@@ -1,3 +1,4 @@
+import 'package:campus_hotel_artichaut_frontend/views/homepage_widgets/hero.dart';
 import 'package:flutter/material.dart';
 
 class MyHomepage extends StatelessWidget {
@@ -5,6 +6,10 @@ class MyHomepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column();
+    return const Column(
+      children: <Widget>[
+        MyHero(),
+      ],
+    );
   }
 }
