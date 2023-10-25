@@ -6,10 +6,12 @@ class MyHomepage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
-      children: <Widget>[
-        MyHero(),
-      ],
+    return const SingleChildScrollView(
+      child: Column(
+        children: <Widget>[
+          MyHero(),
+        ],
+      ),
     );
   }
 }
