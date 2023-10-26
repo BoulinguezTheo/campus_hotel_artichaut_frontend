@@ -35,7 +35,14 @@ ThemeData myTheme = ThemeData(
         color: Color.fromRGBO(0, 0, 0, 1),
         fontSize: 20,
         fontFamily: 'PlayfairDisplay',
-      )),
+      ),
+    headlineLarge: TextStyle(
+      color: Color.fromRGBO(199, 207, 202, 1),
+      fontSize: 20,
+      fontFamily: 'Montserrat',
+      fontWeight: FontWeight.w600,
+    )
+  ),
   cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
     primaryColor: Color.fromRGBO(224, 198, 77, 1),
     applyThemeToAll: true,
