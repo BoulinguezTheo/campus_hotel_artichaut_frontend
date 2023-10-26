@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
 
   final GoRouter _router = GoRouter(
       navigatorKey: _rootNavigatorKey,
-      initialLocation: ConstantsApp.HOMEPAGE_ROUTE,
+      initialLocation: ConstantsApp.INSCRIPTION_ROUTE,
       routes: <RouteBase>[
         ShellRoute(
           navigatorKey: _shellNavigatorKey,
@@ -49,6 +49,10 @@ class MyApp extends StatelessWidget {
             GoRoute(
               path: ConstantsApp.ROOM_LIST_ROUTE,
               builder: (context, state) => const MyRoomTypeList(),
+            ),
+            GoRoute(
+              path: ConstantsApp.INSCRIPTION_ROUTE,
+              builder: (context, state) => const Inscription(),
             ),
             GoRoute(
               path: ConstantsApp.INSCRIPTION_ROUTE,
