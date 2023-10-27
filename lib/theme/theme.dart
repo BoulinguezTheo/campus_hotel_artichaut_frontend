@@ -37,7 +37,10 @@ ThemeData myTheme = ThemeData(
       fontSize: 20,
       fontFamily: 'PlayfairDisplay',
     )
-
+  ),
+    inputDecorationTheme: const InputDecorationTheme(
+      filled: true,
+    fillColor: Color.fromRGBO(236, 242, 240, 1)
   ),
     cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
       primaryColor: Color.fromRGBO(224, 198, 77, 1),
