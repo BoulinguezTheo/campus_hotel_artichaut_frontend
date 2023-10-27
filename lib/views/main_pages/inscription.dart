@@ -1,9 +1,13 @@
+import 'package:campus_hotel_artichaut_frontend/utils/cta_button.dart';
 import 'package:campus_hotel_artichaut_frontend/models/inscription_result.dart';
 import 'package:campus_hotel_artichaut_frontend/services/http_service.dart';
-import 'package:campus_hotel_artichaut_frontend/utils/cta_button.dart';
 import 'package:flutter/material.dart';
 import 'package:scaled_size/scaled_size.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../utils/constants.dart';
+import '../../utils/large_cta_button.dart';
+import '../inscription_widgets/input_field.dart';
 
 import '../../utils/constants.dart';
 import '../../utils/large_cta_button.dart';
