@@ -50,5 +50,3 @@ ThemeData myTheme = ThemeData(
     fillColor: Color.fromRGBO(236, 242, 240, 1)
   ),
 );
-);
-
