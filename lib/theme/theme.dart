@@ -36,15 +36,19 @@ ThemeData myTheme = ThemeData(
       color: Color.fromRGBO(0, 0, 0, 1),
       fontSize: 20,
       fontFamily: 'PlayfairDisplay',
-    )
-  ),
+    )),
+    cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
+      primaryColor: Color.fromRGBO(224, 198, 77, 1),
+      applyThemeToAll: true,
+    ),
+    cardTheme: const CardTheme(
+      color: Color.fromRGBO(255, 255, 255, 1),
+      elevation: 3,
+    ),
     inputDecorationTheme: const InputDecorationTheme(
       filled: true,
     fillColor: Color.fromRGBO(236, 242, 240, 1)
   ),
-    cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
-      primaryColor: Color.fromRGBO(224, 198, 77, 1),
-      applyThemeToAll: true,
-    )
+);
 );
 
