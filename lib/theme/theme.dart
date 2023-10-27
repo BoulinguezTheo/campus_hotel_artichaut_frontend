@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:scaled_size/scaled_size.dart';
 
 ThemeData myTheme = ThemeData(
   scaffoldBackgroundColor: const Color.fromRGBO(199, 207, 202, 1),
