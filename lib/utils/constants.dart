@@ -19,4 +19,5 @@ class ConstantsApp {
       "Nichée au coeur de notre établissement prestigieux, notre suite vous offre une expérience de séjour inégalée. Alliant raffinement et confort, chaque détail a été soigneusement pensé pour répondre aux attentes les plus exigeantes. Venez profiter d'une vue imprenable et d'un service premium dans le bien-être que vous méritez.";
   static const String ROOMS_RESERVE = "Réservez";
   static const String ROOMS_SUITE_DELUXE_PRICE = "280€/nuit/pers.";
+  static const String REVIEWS_TITLE = "Ce qu'ils en pensent";
 }
