@@ -4,6 +4,7 @@ class ConstantsApp {
   static const String ACCOUNT_ROUTE = "/account";
   static const String ROOM_LIST_ROUTE = "/rooms";
   static const String INSCRIPTION_ROUTE = "/users";
+  static const String CONNEXION_ROUTE = "/connexion";
 
   static const String HOMEPAGE_LABEL = "Accueil";
   static const String SEARCH_LABEL = "Réserver";
@@ -24,7 +25,10 @@ class ConstantsApp {
   static const String HINT_EMAIL = "Ex. john.doe@domain.com";
   static const String LABEL_PASSWORD = "Mot de passe";
   static const String HINT_PASSWORD = "Votre mot de passe";
-  static const String  INSCRIPTION_BTN = "S'inscrire";
+  static const String INSCRIPTION_BTN = "S'inscrire";
+  static const String CONNEXION_BTN = "Se connecter";
+  static const String GOOGLE_CONNEXION_BTN = "Se connecter avec Google";
+  static const String FB_CONNEXION_BTN = "Se connecter avec Facebook";
 
   static const String LOGO_ARTICHAUT_PATH = "assets/logo_favicon.svg";
   static const String LOBBY_PICTURE_PATH = "assets/photo_lobby.jpg";
