@@ -8,6 +8,7 @@ import 'package:campus_hotel_artichaut_frontend/views/main_pages/rooms.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:scaled_size/scaled_size.dart';
+import 'package:campus_hotel_artichaut_frontend/services/service_locator.dart';
 
 final GlobalKey<NavigatorState> _rootNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'root');
@@ -15,6 +16,7 @@ final GlobalKey<NavigatorState> _shellNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'shell');
 
 void main() {
+  setup();
   runApp(MyApp());
 }
 
@@ -33,7 +35,9 @@ class MyApp extends StatelessWidget {
           routes: [
             GoRoute(
               path: ConstantsApp.HOMEPAGE_ROUTE,
-              builder: (context, state) => const MyHomepage(),
+              builder: (context, state) {
+                return MyHomepage();
+              }
             ),
             GoRoute(
               path: ConstantsApp.ACCOUNT_ROUTE,

@@ -6,7 +6,6 @@ ThemeData myTheme = ThemeData(
   scaffoldBackgroundColor: const Color.fromRGBO(199, 207, 202, 1),
   primaryColor: const Color.fromRGBO(45, 73, 76, 1),
   cardColor: const Color.fromRGBO(255, 73, 76, 1),
-
   appBarTheme: const AppBarTheme(
     elevation: 0,
     backgroundColor: Color.fromRGBO(45, 73, 76, 1),
@@ -27,26 +26,44 @@ ThemeData myTheme = ThemeData(
     onSurface: Color.fromRGBO(0, 0, 0, 1),
   ),
   textTheme: const TextTheme(
-    displayLarge: TextStyle(
-      color: Color.fromRGBO(255, 255, 255, 1),
-      fontSize: 40,
-      fontFamily: 'PlayfairDisplay',
-    ),
-    labelMedium: TextStyle(
-      color: Color.fromRGBO(0, 0, 0, 1),
-      fontSize: 20,
-      fontFamily: 'PlayfairDisplay',
-    )),
-    cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
-      primaryColor: Color.fromRGBO(224, 198, 77, 1),
-      applyThemeToAll: true,
-    ),
-    cardTheme: const CardTheme(
-      color: Color.fromRGBO(255, 255, 255, 1),
-      elevation: 3,
-    ),
-    inputDecorationTheme: const InputDecorationTheme(
+      displayLarge: TextStyle(
+        color: Color.fromRGBO(255, 255, 255, 1),
+        fontSize: 40,
+        fontFamily: 'PlayfairDisplay',
+      ),
+      labelMedium: TextStyle(
+        color: Color.fromRGBO(0, 0, 0, 1),
+        fontSize: 20,
+        fontFamily: 'PlayfairDisplay',
+      ),
+      titleMedium: TextStyle(
+        color: const Color.fromRGBO(45, 73, 76, 1),
+        fontSize: 20,
+        fontFamily: 'Montserrat',
+        fontWeight: FontWeight.w600,
+      ),
+      bodySmall: TextStyle(
+        color: const Color.fromRGBO(0, 0, 0, 1),
+        fontSize: 14,
+        fontFamily: 'Montserrat',
+        fontWeight: FontWeight.w400,
+      ),
+      headlineLarge: TextStyle(
+        color: Color.fromRGBO(255, 255, 255, 1),
+        fontSize: 20,
+        fontFamily: 'Montserrat',
+        fontWeight: FontWeight.w600,
+      )),
+  cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
+    primaryColor: Color.fromRGBO(224, 198, 77, 1),
+    applyThemeToAll: true,
+  ),
+  cardTheme: const CardTheme(
+    color: Color.fromRGBO(255, 255, 255, 1),
+    elevation: 3,
+  ),
+  inputDecorationTheme: const InputDecorationTheme(
       filled: true,
-    fillColor: Color.fromRGBO(236, 242, 240, 1)
+      fillColor: Color.fromRGBO(236, 242, 240, 1)
   ),
 );
