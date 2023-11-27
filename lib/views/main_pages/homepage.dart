@@ -15,7 +15,7 @@ class MyHomepage extends StatelessWidget {
     return SingleChildScrollView( //const enlevée pour tester données statiques des reviews
       child: Column(
         children: <Widget>[
-          MyHero(),
+          const MyHero(),
           MyReviewWidget(reviews : reviewService.reviews),
         ],
       ),
