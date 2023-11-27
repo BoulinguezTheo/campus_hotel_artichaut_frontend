@@ -1,7 +1,7 @@
 import '../models/reviews_data.dart';
 
 class ReviewService {
-  final List<Review> reviews = [
+  final List<Review> _reviews = [
     Review(
       "Laurine",
       5,
@@ -18,4 +18,8 @@ class ReviewService {
       "Inacceptable, les puces de lit sont partout, ma dulcinée n'a pas voulu rester la nuit! Par contre le jus d'orange était sympa.",
     ),
   ];
+
+  List<Review> get reviews => _reviews;
 }
+
+
