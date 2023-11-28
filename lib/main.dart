@@ -22,6 +22,9 @@ void main() {
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
+  void onPressed(){
+
+  }
 
   final GoRouter _router = GoRouter(
       navigatorKey: _rootNavigatorKey,
@@ -54,6 +57,7 @@ class MyApp extends StatelessWidget {
           ],
         )
       ]);
+
 
   // This widget is the root of your application.
   @override

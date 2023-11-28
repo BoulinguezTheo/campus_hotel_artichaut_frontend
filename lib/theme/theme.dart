@@ -18,7 +18,7 @@ ThemeData myTheme = ThemeData(
     onPrimary: Color.fromRGBO(0, 0, 0, 1),
     secondary: Color.fromRGBO(138, 168, 154, 1),
     onSecondary: Color.fromRGBO(0, 0, 0, 1),
-    error: Color.fromRGBO(235, 52, 52, 0),
+    error: Color.fromRGBO(235, 52, 52, 1),
     onError: Color.fromRGBO(235, 52, 52, 1),
     background: Color.fromRGBO(236, 242, 240, 1),
     onBackground: Color.fromRGBO(45, 73, 76, 1),
