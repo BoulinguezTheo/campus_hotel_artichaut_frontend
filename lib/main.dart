@@ -27,7 +27,7 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  final GoRouter _router = GoRouter(
+  late final GoRouter _router = GoRouter(
       navigatorKey: _rootNavigatorKey,
       initialLocation: ConstantsApp.CONNEXION_ROUTE,
       routes: <RouteBase>[
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
             ),
             GoRoute(
               path: ConstantsApp.CONNEXION_ROUTE,
-              builder: (context, state) => const Connexion(),
+              builder: (context, state) => Connexion(router: _router),
             )
           ],
         )

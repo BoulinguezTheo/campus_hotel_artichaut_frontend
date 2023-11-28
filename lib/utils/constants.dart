@@ -27,8 +27,6 @@ class ConstantsApp {
   static const String HINT_PASSWORD = "Votre mot de passe";
   static const String INSCRIPTION_BTN = "S'inscrire";
   static const String CONNEXION_BTN = "Se connecter";
-  static const String GOOGLE_CONNEXION_BTN = "Se connecter avec Google";
-  static const String FB_CONNEXION_BTN = "Se connecter avec Facebook";
 
   static const String LOGO_ARTICHAUT_PATH = "assets/logo_favicon.svg";
   static const String LOBBY_PICTURE_PATH = "assets/photo_lobby.jpg";

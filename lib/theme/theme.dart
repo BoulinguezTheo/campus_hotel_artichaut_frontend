@@ -25,7 +25,14 @@ ThemeData myTheme = ThemeData(
     onSurface: Color.fromRGBO(0, 0, 0, 1),
   ),
   textTheme: TextTheme(
-      displayLarge: const TextStyle(
+  textTheme: const TextTheme(
+      titleLarge: TextStyle(
+        fontSize: 48,
+        fontWeight: FontWeight.w400,
+        fontFamily: 'PlayfairDisplay',
+        color: Colors.black,
+      ),
+      displayLarge: TextStyle(
         color: Color.fromRGBO(255, 255, 255, 1),
         fontSize: 40,
         fontFamily: 'PlayfairDisplay',
