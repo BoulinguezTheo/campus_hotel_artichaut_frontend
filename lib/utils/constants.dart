@@ -35,4 +35,7 @@ class ConstantsApp {
   static const String ROOMS_RESERVE = "Réservez";
   static const String ROOMS_SUITE_DELUXE_PRICE = "280€/nuit/pers.";
   static const String REVIEWS_TITLE = "Ce qu'ils en pensent";
+  static const String DISCOVER_DESCRIPTION = "Un havre de paix au cœur de la ville. Notre établissement prestigieux est synonyme d'élégance, de raffinement et de service exceptionnel depuis de nombreuses années.";
+  static const String DISCOVER_ELEGANCE_DESCRIPTION = "Niché dans un cadre luxuriant, notre hôtel propose une expérience unique pour les voyageurs exigeants. Avec 25 chambres standards, 5 chambres de luxe et 2 suites, nous offrons un choix d'hébergement pour tous les goûts. Chacune de nos chambres est conçue pour vous offrir un confort optimal et une atmosphère chaleureuse.";
+
 }

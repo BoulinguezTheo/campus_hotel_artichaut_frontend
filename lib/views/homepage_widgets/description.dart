@@ -4,7 +4,6 @@ import 'package:campus_hotel_artichaut_frontend/views/homepage_widgets/descripti
 import 'package:flutter/material.dart';
 import 'package:scaled_size/scaled_size.dart';
 import 'description_widgets/photo_grid.dart';
-import 'package:youtube_player_iframe/youtube_player_iframe.dart';
 
 class MyDescription extends StatelessWidget {
   const MyDescription({super.key});
@@ -24,7 +23,7 @@ class MyDescription extends StatelessWidget {
         SizedBox(
           height: 1.vh,
         ),
-        const MyDescriptionText(),
+        const MyDescriptionText(description: ConstantsApp.DISCOVER_DESCRIPTION),
         SizedBox(
           height: 1.vh,
         ),
@@ -35,7 +34,11 @@ class MyDescription extends StatelessWidget {
         SizedBox(
           height: 1.vh,
         ),
-        const MyVideoPlayer(videoUrl: 'https://www.youtube.com/watch?v=y_j2nhAJQtY')
+        const MyVideoPlayer(videoUrl: 'https://www.youtube.com/watch?v=y_j2nhAJQtY'),
+        SizedBox(
+          height: 1.vh,
+        ),
+        const MyDescriptionText(description: ConstantsApp.DISCOVER_ELEGANCE_DESCRIPTION),
       ],
     );
   }
