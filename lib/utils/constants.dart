@@ -11,6 +11,8 @@ class ConstantsApp {
   static const String ESTABLISMENT_NAME_LABEL = "HOTEL ARTICHAUT";
   static const String REVIEW_LABEL = "Vos avis";
   static const String RESERVATION_LABEL = "Réserver";
+  static const String DISCOVER_TITLE = "Découvrez le confort";
+  static const String DISCOVER_TITLE_ELEGANCE = "Découvrez l'élégance";
 
   static const String LABEL_PRENOM = "Prénom";
   static const String HINT_PRENOM = "Ex. John";
