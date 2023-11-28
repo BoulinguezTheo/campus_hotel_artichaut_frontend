@@ -5,10 +5,12 @@ import 'package:campus_hotel_artichaut_frontend/views/main_pages/homepage.dart';
 import 'package:campus_hotel_artichaut_frontend/views/init_app.dart';
 import 'package:campus_hotel_artichaut_frontend/views/main_pages/inscription.dart';
 import 'package:campus_hotel_artichaut_frontend/views/main_pages/rooms.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:scaled_size/scaled_size.dart';
 import 'package:campus_hotel_artichaut_frontend/services/service_locator.dart';
+
 
 final GlobalKey<NavigatorState> _rootNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'root');
