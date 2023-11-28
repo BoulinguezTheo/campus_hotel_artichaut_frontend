@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class CallToActionButtonLarge extends StatelessWidget {
   VoidCallback onPressed;
   final String label;
+  VoidCallback onPressed;
 
   CallToActionButtonLarge(
       {required this.label,
