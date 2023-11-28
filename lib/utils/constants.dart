@@ -11,6 +11,20 @@ class ConstantsApp {
   static const String ESTABLISMENT_NAME_LABEL = "HOTEL ARTICHAUT";
   static const String REVIEW_LABEL = "Vos avis";
   static const String RESERVATION_LABEL = "Réserver";
+  static const String DISCOVER_TITLE = "Découvrez le confort";
+  static const String DISCOVER_TITLE_ELEGANCE = "Découvrez l'élégance";
+
+  static const String LABEL_PRENOM = "Prénom";
+  static const String HINT_PRENOM = "Ex. John";
+  static const String LABEL_NOM = "Nom";
+  static const String HINT_NOM = "Ex. Doe";
+  static const String LABEL_ADDRESS = "Address";
+  static const String HINT_ADDRESS = "Ex. 5 Rue Maréchal Joffre, 75000 Paris France";
+  static const String LABEL_EMAIL = "Email";
+  static const String HINT_EMAIL = "Ex. john.doe@domain.com";
+  static const String LABEL_PASSWORD = "Mot de pase";
+  static const String HINT_PASSWORD = "Votre mot de pase";
+  static const String  INSCRIPTION_BTN = "S'inscrire";
 
   static const String LABEL_PRENOM = "Prénom";
   static const String HINT_PRENOM = "Ex. John";
@@ -33,4 +47,7 @@ class ConstantsApp {
   static const String ROOMS_RESERVE = "Réservez";
   static const String ROOMS_SUITE_DELUXE_PRICE = "280€/nuit/pers.";
   static const String REVIEWS_TITLE = "Ce qu'ils en pensent";
+  static const String DISCOVER_DESCRIPTION = "Un havre de paix au cœur de la ville. Notre établissement prestigieux est synonyme d'élégance, de raffinement et de service exceptionnel depuis de nombreuses années.";
+  static const String DISCOVER_ELEGANCE_DESCRIPTION = "Niché dans un cadre luxuriant, notre hôtel propose une expérience unique pour les voyageurs exigeants. Avec 25 chambres standards, 5 chambres de luxe et 2 suites, nous offrons un choix d'hébergement pour tous les goûts. Chacune de nos chambres est conçue pour vous offrir un confort optimal et une atmosphère chaleureuse.";
+
 }
