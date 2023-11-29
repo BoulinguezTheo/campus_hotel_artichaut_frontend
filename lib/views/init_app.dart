@@ -9,7 +9,6 @@ class InitApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         title: SvgPicture.asset('assets/logo_simple.svg'),
       ),
