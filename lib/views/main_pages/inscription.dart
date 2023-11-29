@@ -1,3 +1,5 @@
+import 'package:campus_hotel_artichaut_frontend/models/inscription_result.dart';
+import 'package:campus_hotel_artichaut_frontend/services/http_service.dart';
 import 'package:campus_hotel_artichaut_frontend/utils/cta_button.dart';
 import 'package:campus_hotel_artichaut_frontend/models/inscription_result.dart';
 import 'package:campus_hotel_artichaut_frontend/services/http_service.dart';
