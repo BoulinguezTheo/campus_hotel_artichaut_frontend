@@ -1,6 +1,9 @@
+import 'package:campus_hotel_artichaut_frontend/models/inscription_result.dart';
+import 'package:campus_hotel_artichaut_frontend/services/http_service.dart';
 import 'package:campus_hotel_artichaut_frontend/utils/cta_button.dart';
 import 'package:flutter/material.dart';
 import 'package:scaled_size/scaled_size.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../utils/constants.dart';
 import '../../utils/large_cta_button.dart';
@@ -17,12 +20,49 @@ class Inscription extends StatefulWidget {
 class _InscriptionState extends State<Inscription> {
   final _formKey = GlobalKey<FormState>();
 
+  late String prenom;
+  late String nom;
+  late String address;
+  late String email;
+  late String pass;
+  String role = "ROLE_USER";
+
+  void inscriptionReturn(bool result){
+    if ( result )
+    {
+      // Navigator.pop(context);
+      // Navigator.push(context);
+
+      context.go(ConstantsApp.HOMEPAGE_ROUTE);
+    }
+  }
   void onPressed() {
     if (_formKey.currentState!.validate()) {
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Processing Data')),
-      );
+      // ScaffoldMessenger.of(context).showSnackBar(
+      //   const SnackBar(content: Text('Processing Data')),
+      // );
+      _formKey.currentState?.save();
+      HttpService httpService = HttpService();
+      Future<InscriptionResult> future = httpService.inscription(prenom, nom, address, email, pass, role, inscriptionReturn);
     }
+  }
+  void onSaved(value, field){
+    setState(() {
+
+      // ${field} = value;
+
+      if(field == "prenom"){
+        prenom = value;
+      }else if(field == "nom"){
+        nom = value;
+      }else if(field == "address"){
+        address = value;
+      }else if(field == "email"){
+        email = value;
+      }else{
+        pass = value;
+      }
+    });
   }
 
   @override
@@ -45,43 +85,56 @@ class _InscriptionState extends State<Inscription> {
                 ),
               ),
             ),
-            const InputField(
+            InputField(
                 label: ConstantsApp.LABEL_PRENOM,
                 hint: ConstantsApp.HINT_PRENOM,
-                icon: Icon(Icons.person),
+                icon: const Icon(Icons.person),
                 obscureText: false,
                 autocorrect: true,
-                enableSuggestions: true),
-            const InputField(
+                enableSuggestions: true,
+                onSaved: (value) => onSaved(value,"prenom"),
+                field: "prenom"
+            ),
+            InputField(
                 label: ConstantsApp.LABEL_NOM,
                 hint: ConstantsApp.HINT_NOM,
-                icon: Icon(Icons.person),
+                icon: const Icon(Icons.person),
                 obscureText: false,
                 autocorrect: true,
-                enableSuggestions: true),
-            const InputField(
+                enableSuggestions: true,
+                onSaved: (value) => onSaved(value,"nom"),
+                field: "nom"
+            ),
+            InputField(
                 label: ConstantsApp.LABEL_ADDRESS,
                 hint: ConstantsApp.HINT_ADDRESS,
-                icon: Icon(Icons.add_location_rounded),
+                icon: const Icon(Icons.add_location_rounded),
                 obscureText: false,
                 autocorrect: true,
-                enableSuggestions: true),
-            const InputField(
+                enableSuggestions: true,
+                onSaved: (value) => onSaved(value,"address"),
+                field: "address"),
+            InputField(
                 label: ConstantsApp.LABEL_EMAIL,
                 hint: ConstantsApp.HINT_EMAIL,
-                icon: Icon(Icons.email),
+                icon: const Icon(Icons.email),
                 obscureText: false,
                 autocorrect: true,
-                enableSuggestions: true),
-            const InputField(
+                enableSuggestions: true,
+                onSaved: (value) => onSaved(value,"email"),
+                field: "email"),
+            InputField(
                 label: ConstantsApp.LABEL_PASSWORD,
                 hint: ConstantsApp.HINT_PASSWORD,
-                icon: Icon(Icons.password_outlined),
+                icon: const Icon(Icons.password_outlined),
                 obscureText: true,
                 autocorrect: false,
-                enableSuggestions: false),
+                enableSuggestions: false,
+                onSaved: (value) => onSaved(value,"pass"),
+                field: "pass"),
             CallToActionButtonLarge(
-                label: ConstantsApp.INSCRIPTION_BTN, onPressed: onPressed),
+                label: ConstantsApp.INSCRIPTION_BTN,
+                onPressed: onPressed),
           ], //children
         )
         )
