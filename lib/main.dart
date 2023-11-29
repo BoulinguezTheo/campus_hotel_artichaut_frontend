@@ -5,6 +5,7 @@ import 'package:campus_hotel_artichaut_frontend/views/main_pages/account.dart';
 import 'package:campus_hotel_artichaut_frontend/views/main_pages/homepage.dart';
 import 'package:campus_hotel_artichaut_frontend/views/init_app.dart';
 import 'package:campus_hotel_artichaut_frontend/views/main_pages/inscription.dart';
+import 'package:campus_hotel_artichaut_frontend/views/main_pages/reservation.dart';
 import 'package:campus_hotel_artichaut_frontend/views/main_pages/rooms.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -53,6 +54,10 @@ class MyApp extends StatelessWidget {
             GoRoute(
               path: ConstantsApp.INSCRIPTION_ROUTE,
               builder: (context, state) => const Inscription(),
+            ),
+            GoRoute(
+              path: ConstantsApp.RESERVATION_ROUTE,
+              builder: (context, state) => const Reservation(),
             ),
           ],
         )

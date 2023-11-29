@@ -47,6 +47,13 @@ ThemeData myTheme = ThemeData(
         fontFamily: 'Montserrat',
         fontWeight: FontWeight.w400,
       ),
+      displayMedium: const TextStyle(
+        fontFamily: 'Montserrat',
+        fontSize: 16,
+        fontWeight: FontWeight.w600,
+        color: Color.fromRGBO(45, 73, 76, 1),
+
+      ),
       headlineLarge: const TextStyle(
         color: Color.fromRGBO(255, 255, 255, 1),
         fontSize: 20,

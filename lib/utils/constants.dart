@@ -4,6 +4,7 @@ class ConstantsApp {
   static const String ACCOUNT_ROUTE = "/account";
   static const String ROOM_LIST_ROUTE = "/rooms";
   static const String INSCRIPTION_ROUTE = "/users";
+  static const String RESERVATION_ROUTE = "/reservation";
 
   static const String HOMEPAGE_LABEL = "Accueil";
   static const String SEARCH_LABEL = "Réserver";
@@ -29,12 +30,24 @@ class ConstantsApp {
 
   static const String LOGO_ARTICHAUT_PATH = "assets/logo_favicon.svg";
   static const String LOBBY_PICTURE_PATH = "assets/photo_lobby.jpg";
+
+  static const String ROOMS_STANDARD_CHAMBER_PATH= "assets/chamber.jpg";
+  static const String ROOMS_LUXE_CHAMBER = "assets/kitchen.jpg";
   static const String ROOMS_SUITE_DELUXE_PATH = "assets/images/Bath.jpg";
+
+  static const String ROOMS_STANDARD_CHAMBER_TITLE = "Chambre cosy";
+  static const String ROOMS_LUXE_CHAMBER_TITLE = "Chambre de luxe";
   static const String ROOMS_SUITE_DELUXE_TITLE = "Suite Deluxe";
+
+  static const String ROOMS_STANDARD_CHAMBER_PRICE = "70€/nuit/pers.";
+  static const String ROOMS_LUXE_CHAMBER_PRICE = "140€/nuit/pers.";
+  static const String ROOMS_SUITE_DELUXE_PRICE = "280€/nuit/pers.";
+
+  static const String ROOMS_PRICE = "€/nuit/pers.";
+
   static const String ROOMS_SUITE_DELUXE_TEXT =
       "Nichée au coeur de notre établissement prestigieux, notre suite vous offre une expérience de séjour inégalée. Alliant raffinement et confort, chaque détail a été soigneusement pensé pour répondre aux attentes les plus exigeantes. Venez profiter d'une vue imprenable et d'un service premium dans le bien-être que vous méritez.";
   static const String ROOMS_RESERVE = "Réservez";
-  static const String ROOMS_PRICE = "€/nuit/pers.";
   static const String REVIEWS_TITLE = "Ce qu'ils en pensent";
   static const String DISCOVER_DESCRIPTION = "Un havre de paix au cœur de la ville. Notre établissement prestigieux est synonyme d'élégance, de raffinement et de service exceptionnel depuis de nombreuses années.";
   static const String DISCOVER_ELEGANCE_DESCRIPTION = "Niché dans un cadre luxuriant, notre hôtel propose une expérience unique pour les voyageurs exigeants. Avec 25 chambres standards, 5 chambres de luxe et 2 suites, nous offrons un choix d'hébergement pour tous les goûts. Chacune de nos chambres est conçue pour vous offrir un confort optimal et une atmosphère chaleureuse.";
