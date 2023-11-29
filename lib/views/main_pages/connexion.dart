@@ -38,7 +38,7 @@ class _ConnexionState extends State<Connexion> {
               ),
             ),
           ),
-          InputField(
+          const InputField(
             label: ConstantsApp.LABEL_EMAIL,
             hint: ConstantsApp.HINT_EMAIL,
             icon: Icon(Icons.email),
@@ -46,7 +46,7 @@ class _ConnexionState extends State<Connexion> {
             autocorrect: true,
             enableSuggestions: true,
           ),
-          InputField(
+          const InputField(
             label: ConstantsApp.LABEL_PASSWORD,
             hint: ConstantsApp.HINT_PASSWORD,
             icon: Icon(Icons.password_outlined),
@@ -70,9 +70,4 @@ class _ConnexionState extends State<Connexion> {
     )
     );
   }
-
-  Future<void> sendDataToBackend(String email, String password) async {
-    // Logique d'envoi au Back
-  }
-
 }
