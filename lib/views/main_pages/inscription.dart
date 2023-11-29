@@ -7,7 +7,6 @@ import '../../utils/large_cta_button.dart';
 import '../inscription_widgets/input_field.dart';
 
 class Inscription extends StatefulWidget {
-  // VoidCallback onPressed;
 
   const Inscription({Key? key}) : super(key: key);
 
