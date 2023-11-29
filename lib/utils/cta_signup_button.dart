@@ -30,9 +30,9 @@ class CallToActionSignUpButton extends StatelessWidget {
           },
           child: Text(
             label,
-            style: const TextStyle(
+            style: TextStyle(
                 fontSize: 24,
-                color: Colors.white,
+                color: Theme.of(context).cardTheme.color,
             ),
           ),
         ));

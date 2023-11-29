@@ -4,7 +4,7 @@ class ConstantsApp {
   static const String ACCOUNT_ROUTE = "/account";
   static const String ROOM_LIST_ROUTE = "/rooms";
   static const String INSCRIPTION_ROUTE = "/users";
-  static const String CONNEXION_ROUTE = "/connexion";
+  static const String CONNEXION_ROUTE = "/login";
 
   static const String HOMEPAGE_LABEL = "Accueil";
   static const String SEARCH_LABEL = "Réserver";

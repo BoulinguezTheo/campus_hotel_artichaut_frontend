@@ -1,4 +1,3 @@
-import 'package:campus_hotel_artichaut_frontend/utils/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -24,19 +23,18 @@ class CallToActionConnexionButton extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: Color.fromRGBO(224, 198, 77, 1),
+            backgroundColor: Theme.of(context).cupertinoOverrideTheme?.primaryColor,
             minimumSize: const Size.fromHeight(50),
           ),
           onPressed: () {
             if (formKey.currentState!.validate()) {
-              // Envoyer au back
             }
           },
           child: Text(
             label,
-            style: const TextStyle(
+            style: TextStyle(
                 fontSize: 24,
-                color: Color.fromRGBO(255, 255, 255, 1)
+                color: Theme.of(context).cardTheme.color
             ),
           ),
         ));
