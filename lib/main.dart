@@ -25,9 +25,6 @@ Future<void> main() async {
 
 class MyApp extends StatelessWidget {
   MyApp({super.key});
-  void onPressed(){
-
-  }
 
   final GoRouter _router = GoRouter(
       navigatorKey: _rootNavigatorKey,
