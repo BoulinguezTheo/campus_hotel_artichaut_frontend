@@ -1,10 +1,14 @@
+import 'package:campus_hotel_artichaut_frontend/features/room_category_list/domain/entities/room_type_entity.dart';
 import 'package:campus_hotel_artichaut_frontend/utils/constants.dart';
 import 'package:campus_hotel_artichaut_frontend/utils/cta_button.dart';
 import 'package:flutter/material.dart';
 import 'package:scaled_size/scaled_size.dart';
 
+import '../../features/room_category_list/data/models/room_type.dart';
+
 class MyCard extends StatelessWidget {
-  const MyCard({Key? key}) : super(key: key);
+  final RoomTypeEntity roomType;
+  const MyCard({required this.roomType});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +34,7 @@ class MyCard extends StatelessWidget {
                   Align(
                     alignment: Alignment.topLeft,
                     child: Text(
-                      ConstantsApp.ROOMS_SUITE_DELUXE_TITLE,
+                      roomType.name!,
                       style: TextStyle(
                         fontFamily: 'Montserrat',
                         fontWeight: FontWeight.w600,
@@ -41,7 +45,7 @@ class MyCard extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   Text(
-                    ConstantsApp.ROOMS_SUITE_DELUXE_TEXT,
+                    roomType.description!,
                     style: TextStyle(
                       fontFamily: 'Montserrat',
                       fontWeight: FontWeight.w500,
@@ -61,7 +65,7 @@ class MyCard extends StatelessWidget {
                         ),
                         SizedBox(width: 5.vw),
                         Text(
-                          ConstantsApp.ROOMS_SUITE_DELUXE_PRICE,
+                          '${roomType.price.toString()}${ConstantsApp.ROOMS_PRICE}',
                           style: TextStyle(
                             fontFamily: 'Montserrat',
                             fontWeight: FontWeight.w600,
