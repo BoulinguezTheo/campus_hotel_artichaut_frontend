@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
 
   final GoRouter _router = GoRouter(
       navigatorKey: _rootNavigatorKey,
-      initialLocation: ConstantsApp.HOMEPAGE_ROUTE,
+      initialLocation: ConstantsApp.INSCRIPTION_ROUTE,
       routes: <RouteBase>[
         ShellRoute(
           navigatorKey: _shellNavigatorKey,
