@@ -8,10 +8,10 @@ class MyRooms extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(children: const <Widget>[
-      MyCard(),
-      MyCard(),
-      MyCard(),
-      MyCard(),
+      // MyCard(),
+      // MyCard(),
+      // MyCard(),
+      // MyCard(),
     ]);
   }
 }
