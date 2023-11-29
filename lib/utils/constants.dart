@@ -26,6 +26,7 @@ class ConstantsApp {
   static const String HINT_PASSWORD = "Votre mot de pase";
   static const String  INSCRIPTION_BTN = "S'inscrire";
 
+
   static const String LOGO_ARTICHAUT_PATH = "assets/logo_favicon.svg";
   static const String LOBBY_PICTURE_PATH = "assets/photo_lobby.jpg";
   static const String ROOMS_SUITE_DELUXE_PATH = "assets/images/Bath.jpg";
