@@ -1,3 +1,4 @@
+import 'package:campus_hotel_artichaut_frontend/features/room_category_list/presentation/pages/room_type_list.dart';
 import 'package:campus_hotel_artichaut_frontend/theme/theme.dart';
 import 'package:campus_hotel_artichaut_frontend/utils/constants.dart';
 import 'package:campus_hotel_artichaut_frontend/views/main_pages/account.dart';
@@ -5,7 +6,6 @@ import 'package:campus_hotel_artichaut_frontend/views/main_pages/homepage.dart';
 import 'package:campus_hotel_artichaut_frontend/views/init_app.dart';
 import 'package:campus_hotel_artichaut_frontend/views/main_pages/inscription.dart';
 import 'package:campus_hotel_artichaut_frontend/views/main_pages/rooms.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:scaled_size/scaled_size.dart';
@@ -17,7 +17,8 @@ final GlobalKey<NavigatorState> _rootNavigatorKey =
 final GlobalKey<NavigatorState> _shellNavigatorKey =
     GlobalKey<NavigatorState>(debugLabel: 'shell');
 
-void main() {
+Future<void> main() async {
+  await initializeDependencies();
   setup();
   runApp(MyApp());
 }
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
 
   final GoRouter _router = GoRouter(
       navigatorKey: _rootNavigatorKey,
-      initialLocation: ConstantsApp.INSCRIPTION_ROUTE,
+      initialLocation: ConstantsApp.HOMEPAGE_ROUTE,
       routes: <RouteBase>[
         ShellRoute(
           navigatorKey: _shellNavigatorKey,
@@ -47,7 +48,7 @@ class MyApp extends StatelessWidget {
             ),
             GoRoute(
               path: ConstantsApp.ROOM_LIST_ROUTE,
-              builder: (context, state) => const MyRooms(),
+              builder: (context, state) => const MyRoomTypeList(),
             ),
             GoRoute(
               path: ConstantsApp.INSCRIPTION_ROUTE,
