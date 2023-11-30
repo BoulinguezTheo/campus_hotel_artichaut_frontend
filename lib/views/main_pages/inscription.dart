@@ -10,7 +10,6 @@ import '../../utils/large_cta_button.dart';
 import '../inscription_widgets/input_field.dart';
 
 class Inscription extends StatefulWidget {
-
   const Inscription({Key? key}) : super(key: key);
 
   @override
@@ -26,34 +25,35 @@ class _InscriptionState extends State<Inscription> {
   late String email;
   late String password;
 
-  void inscriptionReturn(bool result){
-    if ( result )
-    {
-
+  void inscriptionReturn(bool result) {
+    if (result) {
       context.go(ConstantsApp.HOMEPAGE_ROUTE);
     }
   }
+
   void onPressed() async {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState?.save();
       HttpService httpService = HttpService();
-      Future<bool> responseIsSuccess = httpService.inscription(firstname, lastname, address, email, password);
+      Future<bool> responseIsSuccess = httpService.inscription(
+          firstname, lastname, address, email, password);
       if (await responseIsSuccess) {
         context.go(ConstantsApp.HOMEPAGE_ROUTE);
       }
     }
   }
-  void onSaved(value, field){
+
+  void onSaved(value, field) {
     setState(() {
-      if(field == "firstname"){
+      if (field == "firstname") {
         firstname = value;
-      }else if(field == "lastname"){
+      } else if (field == "lastname") {
         lastname = value;
-      }else if(field == "address"){
+      } else if (field == "address") {
         address = value;
-      }else if(field == "email"){
+      } else if (field == "email") {
         email = value;
-      }else{
+      } else {
         password = value;
       }
     });
@@ -86,9 +86,8 @@ class _InscriptionState extends State<Inscription> {
                 obscureText: false,
                 autocorrect: true,
                 enableSuggestions: true,
-                onSaved: (value) => onSaved(value,"firstname"),
-                field: "firstname"
-            ),
+                onSaved: (value) => onSaved(value, "firstname"),
+                field: "firstname"),
             InputField(
                 label: ConstantsApp.LABEL_NOM,
                 hint: ConstantsApp.HINT_NOM,
@@ -96,9 +95,8 @@ class _InscriptionState extends State<Inscription> {
                 obscureText: false,
                 autocorrect: true,
                 enableSuggestions: true,
-                onSaved: (value) => onSaved(value,"lastname"),
-                field: "lastname"
-            ),
+                onSaved: (value) => onSaved(value, "lastname"),
+                field: "lastname"),
             InputField(
                 label: ConstantsApp.LABEL_ADDRESS,
                 hint: ConstantsApp.HINT_ADDRESS,
@@ -106,7 +104,7 @@ class _InscriptionState extends State<Inscription> {
                 obscureText: false,
                 autocorrect: true,
                 enableSuggestions: true,
-                onSaved: (value) => onSaved(value,"address"),
+                onSaved: (value) => onSaved(value, "address"),
                 field: "address"),
             InputField(
                 label: ConstantsApp.LABEL_EMAIL,
@@ -115,7 +113,7 @@ class _InscriptionState extends State<Inscription> {
                 obscureText: false,
                 autocorrect: true,
                 enableSuggestions: true,
-                onSaved: (value) => onSaved(value,"email"),
+                onSaved: (value) => onSaved(value, "email"),
                 field: "email"),
             InputField(
                 label: ConstantsApp.LABEL_PASSWORD,
@@ -124,22 +122,27 @@ class _InscriptionState extends State<Inscription> {
                 obscureText: true,
                 autocorrect: false,
                 enableSuggestions: false,
-                onSaved: (value) => onSaved(value,"password"),
+                onSaved: (value) => onSaved(value, "password"),
                 field: "password"),
             CallToActionButtonLarge(
-                label: ConstantsApp.INSCRIPTION_BTN,
-                onPressed: onPressed),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-              child: Text(
-                'Déja inscrit ? Connectez vous',
-                    style: TextStyle(color: Theme.of(context).cardTheme?.color),
-
+                label: ConstantsApp.INSCRIPTION_BTN, onPressed: onPressed),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              child: Center(
+                child: GestureDetector(
+                  onTap: (){
+                    context.go(ConstantsApp.HOMEPAGE_ROUTE);
+                  },
+                  child: Text(
+                    'Déja inscrit ? Connectez vous',
+                    style: TextStyle(
+                      color: Theme.of(context).colorScheme.primary,
+                    ),
+                  ),
+                ),
               ),
             ),
           ], //children
-        )
-        )
-    );
+        )));
   }
 }
