@@ -7,7 +7,7 @@ class HttpService
 {
 
   Function? callBack;
-  Future<InscriptionResult> inscription(String firstname, String lastname, String email, String password,String address)
+  Future<bool> inscription(String firstname, String lastname, String address, String email, String password)
   async {
     String url = "http://10.0.2.2:8081/api/authentication/users";
     var data = jsonEncode(<String, String>{
@@ -25,7 +25,8 @@ class HttpService
       body: data,
     );
     if(response.statusCode == 200){
-      return InscriptionResult.fromJson(jsonDecode(response.body));
+      InscriptionResult inscriptionResult = InscriptionResult.fromJson(jsonDecode(response.body));
+      return true;
     }else if(response.statusCode == null){
         throw Exception('Failed to create user.');
     }

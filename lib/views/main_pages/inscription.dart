@@ -33,12 +33,14 @@ class _InscriptionState extends State<Inscription> {
       context.go(ConstantsApp.HOMEPAGE_ROUTE);
     }
   }
-  void onPressed() {
+  void onPressed() async {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState?.save();
       HttpService httpService = HttpService();
-      Future<InscriptionResult> future = httpService.inscription(firstname, lastname, address, email, password);
-      // print(future.getId());
+      Future<bool> responseIsSuccess = httpService.inscription(firstname, lastname, address, email, password);
+      if (await responseIsSuccess) {
+        context.go(ConstantsApp.HOMEPAGE_ROUTE);
+      }
     }
   }
   void onSaved(value, field){
