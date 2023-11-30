@@ -30,6 +30,9 @@ ThemeData myTheme = ThemeData(
         fontSize: 40,
         fontFamily: 'PlayfairDisplay',
       ),
+    displayMedium: const TextStyle(
+      fontSize: 20,
+    ),
       labelMedium: const TextStyle(
         color: Color.fromRGBO(0, 0, 0, 1),
         fontSize: 20,
