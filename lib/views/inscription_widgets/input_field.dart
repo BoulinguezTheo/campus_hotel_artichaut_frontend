@@ -38,7 +38,7 @@ class InputField extends StatelessWidget {
               border: const OutlineInputBorder(),
               labelText: label,
               labelStyle:
-                  const TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                   TextStyle(fontSize: Theme.of(context).textTheme.displayMedium?.fontSize, fontWeight: FontWeight.w600),
               prefixIcon: icon,
               hintText: hint),
           validator: (String? value) {

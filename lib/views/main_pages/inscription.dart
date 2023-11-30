@@ -20,15 +20,16 @@ class Inscription extends StatefulWidget {
 class _InscriptionState extends State<Inscription> {
   final _formKey = GlobalKey<FormState>();
 
-  late String prenom;
-  late String nom;
+  late String firstname;
+  late String lastname;
   late String address;
   late String email;
-  late String pass;
+  late String password;
 
   void inscriptionReturn(bool result){
     if ( result )
     {
+
       context.go(ConstantsApp.HOMEPAGE_ROUTE);
     }
   }
@@ -36,22 +37,22 @@ class _InscriptionState extends State<Inscription> {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState?.save();
       HttpService httpService = HttpService();
-      Future<InscriptionResult> future = httpService.inscription(prenom, nom, address, email, pass);
+      Future<InscriptionResult> future = httpService.inscription(firstname, lastname, address, email, password);
       // print(future.getId());
     }
   }
   void onSaved(value, field){
     setState(() {
-      if(field == "prenom"){
-        prenom = value;
-      }else if(field == "nom"){
-        nom = value;
+      if(field == "firstname"){
+        firstname = value;
+      }else if(field == "lastname"){
+        lastname = value;
       }else if(field == "address"){
         address = value;
       }else if(field == "email"){
         email = value;
       }else{
-        pass = value;
+        password = value;
       }
     });
   }
@@ -83,8 +84,8 @@ class _InscriptionState extends State<Inscription> {
                 obscureText: false,
                 autocorrect: true,
                 enableSuggestions: true,
-                onSaved: (value) => onSaved(value,"prenom"),
-                field: "prenom"
+                onSaved: (value) => onSaved(value,"firstname"),
+                field: "firstname"
             ),
             InputField(
                 label: ConstantsApp.LABEL_NOM,
@@ -93,8 +94,8 @@ class _InscriptionState extends State<Inscription> {
                 obscureText: false,
                 autocorrect: true,
                 enableSuggestions: true,
-                onSaved: (value) => onSaved(value,"nom"),
-                field: "nom"
+                onSaved: (value) => onSaved(value,"lastname"),
+                field: "lastname"
             ),
             InputField(
                 label: ConstantsApp.LABEL_ADDRESS,
@@ -121,8 +122,8 @@ class _InscriptionState extends State<Inscription> {
                 obscureText: true,
                 autocorrect: false,
                 enableSuggestions: false,
-                onSaved: (value) => onSaved(value,"pass"),
-                field: "pass"),
+                onSaved: (value) => onSaved(value,"password"),
+                field: "password"),
             CallToActionButtonLarge(
                 label: ConstantsApp.INSCRIPTION_BTN,
                 onPressed: onPressed),

@@ -24,7 +24,7 @@ class CallToActionButtonLarge extends StatelessWidget {
           child: Text(
             label,
             style: TextStyle(
-              fontSize: 24,
+              fontSize: Theme.of(context).textTheme.displayMedium?.fontSize,
               color: Theme.of(context).cardTheme.color,
             ),
           ),

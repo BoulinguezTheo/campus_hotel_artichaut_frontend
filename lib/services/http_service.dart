@@ -7,14 +7,14 @@ class HttpService
 {
 
   Function? callBack;
-  Future<InscriptionResult> inscription(String prenom, String nom, String address, String email, String pass)
+  Future<InscriptionResult> inscription(String firstname, String lastname, String email, String password,String address)
   async {
     String url = "http://10.0.2.2:8081/api/authentication/users";
     var data = jsonEncode(<String, String>{
-      'firstname':prenom,
-      'lastname': nom,
+      'firstname':firstname,
+      'lastname': lastname,
       'email':email,
-      'password':pass,
+      'password':password,
       'address': address,
     });
     final response = await http.post(
