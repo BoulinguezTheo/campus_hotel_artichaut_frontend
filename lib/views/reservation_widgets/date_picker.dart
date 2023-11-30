@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
 class DatePicker extends StatefulWidget {
-  const DatePicker({Key? key}) : super(key: key);
+  final String dateLabel;
+  final Function(DateTime) onSelectDate;
+
+  const DatePicker(this.dateLabel, {required this.onSelectDate, Key? key}) : super(key: key);
 
   @override
   State<DatePicker> createState() => _DatePickerState();
 }
 
 class _DatePickerState extends State<DatePicker> {
-  late DateTime selectedBeginDate = DateTime.now();
-  late DateTime selectedEndDate = DateTime.now();
+  late DateTime selectedDate = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
@@ -19,23 +21,26 @@ class _DatePickerState extends State<DatePicker> {
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           Text(
-            "${selectedBeginDate.year} - ${selectedBeginDate.month} - ${selectedBeginDate.day}",
+            widget.dateLabel,
           ),
           ElevatedButton(
             onPressed: () async {
-              final DateTime? dateTimeBegin = await showDatePicker(
+              final DateTime? pickedDate = await showDatePicker(
                 context: context,
-                initialDate: selectedBeginDate,
+                initialDate: selectedDate,
                 firstDate: DateTime(2000),
                 lastDate: DateTime(3000),
               );
-              if (dateTimeBegin != null){
+              if (pickedDate != null) {
                 setState(() {
-                  selectedBeginDate = dateTimeBegin;
+                  selectedDate = pickedDate;
                 });
+
+                // Appeler la fonction pour mettre à jour la date sélectionnée dans le widget parent
+                widget.onSelectDate(selectedDate);
               }
             },
-            child: Text(DateFormat('yyyy-MM-dd').format(selectedBeginDate)),
+            child: Text(DateFormat('yyyy-MM-dd').format(selectedDate)),
           ),
         ],
       ),

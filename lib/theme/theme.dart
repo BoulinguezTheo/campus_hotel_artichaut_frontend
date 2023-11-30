@@ -78,6 +78,7 @@ ThemeData myTheme = ThemeData(
         color: Color.fromRGBO(45, 73, 76, 1),
         fontSize: 18,
         fontFamily: 'Montserrat',
+        fontWeight: FontWeight.w500,
       ),
   ),
   cupertinoOverrideTheme: const NoDefaultCupertinoThemeData(
