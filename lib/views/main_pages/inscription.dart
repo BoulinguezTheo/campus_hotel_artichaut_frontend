@@ -128,7 +128,7 @@ class _InscriptionState extends State<Inscription> {
               child: Center(
                 child: GestureDetector(
                   onTap: (){
-                    context.go(ConstantsApp.HOMEPAGE_ROUTE);
+                    context.go(ConstantsApp.CONNEXION_ROUTE);
                   },
                   child: Text(
                     'Déja inscrit ? Connectez vous',
