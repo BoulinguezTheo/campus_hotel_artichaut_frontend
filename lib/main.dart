@@ -1,4 +1,5 @@
 import 'package:campus_hotel_artichaut_frontend/features/reservation/presentation/pages/reservation.dart';
+import 'package:campus_hotel_artichaut_frontend/features/room_category_list/data/models/room_type.dart';
 import 'package:campus_hotel_artichaut_frontend/features/room_category_list/presentation/pages/room_type_list.dart';
 import 'package:campus_hotel_artichaut_frontend/theme/theme.dart';
 import 'package:campus_hotel_artichaut_frontend/utils/constants.dart';
@@ -56,11 +57,16 @@ class MyApp extends StatelessWidget {
             ),
             GoRoute(
               path: ConstantsApp.RESERVATION_ROUTE,
-              builder: (context, state) => const MyReservation(),
+              builder: (context, state) {
+                print(state.extra);
+                RoomTypeModel room = state.extra as RoomTypeModel;
+                return MyReservation(roomType: room);
+              }
             ),
           ],
         )
-      ]);
+      ]
+  );
 
 
   // This widget is the root of your application.

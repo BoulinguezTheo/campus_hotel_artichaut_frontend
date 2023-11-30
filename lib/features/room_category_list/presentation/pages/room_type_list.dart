@@ -38,8 +38,11 @@ class _MyRoomTypeListState extends State<MyRoomTypeList> {
         return ListView.builder(
           itemBuilder: (context, index) {
             return MyCard(
-                roomType: state.roomTypeList![index],
-              onPressed: () => {GoRouter.of(context).go(ConstantsApp.RESERVATION_ROUTE)},
+              roomType: state.roomTypeList![index],
+              onPressed: () => {
+                GoRouter.of(context).go(ConstantsApp.RESERVATION_ROUTE,
+                    extra: state.roomTypeList![index])
+              },
             );
           },
           itemCount: state.roomTypeList!.length,
