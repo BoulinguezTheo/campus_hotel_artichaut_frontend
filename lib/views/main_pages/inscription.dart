@@ -25,7 +25,6 @@ class _InscriptionState extends State<Inscription> {
   late String address;
   late String email;
   late String pass;
-  // String role = "ROLE_USER";
 
   void inscriptionReturn(bool result){
     if ( result )
@@ -37,7 +36,8 @@ class _InscriptionState extends State<Inscription> {
     if (_formKey.currentState!.validate()) {
       _formKey.currentState?.save();
       HttpService httpService = HttpService();
-      Future<InscriptionResult> future = httpService.inscription(prenom, nom, address, email, pass, inscriptionReturn);
+      Future<InscriptionResult> future = httpService.inscription(prenom, nom, address, email, pass);
+      // print(future.getId());
     }
   }
   void onSaved(value, field){
