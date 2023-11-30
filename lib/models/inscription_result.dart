@@ -21,4 +21,7 @@ class InscriptionResult
       tokenType: json["token_type"],
     );
   }
+  int getId(){
+    return id;
+  }
 }
