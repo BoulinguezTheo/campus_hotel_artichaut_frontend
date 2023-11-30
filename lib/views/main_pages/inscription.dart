@@ -25,32 +25,23 @@ class _InscriptionState extends State<Inscription> {
   late String address;
   late String email;
   late String pass;
-  String role = "ROLE_USER";
+  // String role = "ROLE_USER";
 
   void inscriptionReturn(bool result){
     if ( result )
     {
-      // Navigator.pop(context);
-      // Navigator.push(context);
-
       context.go(ConstantsApp.HOMEPAGE_ROUTE);
     }
   }
   void onPressed() {
     if (_formKey.currentState!.validate()) {
-      // ScaffoldMessenger.of(context).showSnackBar(
-      //   const SnackBar(content: Text('Processing Data')),
-      // );
       _formKey.currentState?.save();
       HttpService httpService = HttpService();
-      Future<InscriptionResult> future = httpService.inscription(prenom, nom, address, email, pass, role, inscriptionReturn);
+      Future<InscriptionResult> future = httpService.inscription(prenom, nom, address, email, pass, inscriptionReturn);
     }
   }
   void onSaved(value, field){
     setState(() {
-
-      // ${field} = value;
-
       if(field == "prenom"){
         prenom = value;
       }else if(field == "nom"){
