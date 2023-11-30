@@ -23,7 +23,7 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         context.go(ConstantsApp.HOMEPAGE_ROUTE);
         break;
       case 2:
-        context.go(ConstantsApp.ACCOUNT_ROUTE);
+        context.go(ConstantsApp.INSCRIPTION_ROUTE);
         break;
       default:
         break;
