@@ -12,9 +12,9 @@ class HeroCallToActionButtons extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        const CallToActionButton(label: ConstantsApp.REVIEW_LABEL),
+        CallToActionButton(label: ConstantsApp.REVIEW_LABEL, onPressed: () => {},),
         SizedBox(width: 6.vw),
-        const CallToActionButton(label: ConstantsApp.RESERVATION_LABEL),
+        CallToActionButton(label: ConstantsApp.RESERVATION_LABEL, onPressed: () => {}),
       ],
     );
   }

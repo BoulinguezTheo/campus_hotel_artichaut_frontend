@@ -12,5 +12,4 @@ class GetRoomTypeUseCase implements UseCase<DataState<List<RoomTypeEntity>>, voi
   Future<DataState<List<RoomTypeEntity>>> call({params}) {
     return _roomTypeRepository.getRoomTypeList();
   }
-
 }

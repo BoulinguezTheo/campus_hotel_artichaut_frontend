@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 class CallToActionButton extends StatelessWidget {
   final String label;
-  const CallToActionButton({required this.label, Key? key}) : super(key: key);
+  VoidCallback onPressed;
+  CallToActionButton({required this.label, required this.onPressed, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +14,7 @@ class CallToActionButton extends StatelessWidget {
         label,
         style: Theme.of(context).textTheme.labelMedium,
       ),
-      onPressed: () {},
+      onPressed: onPressed,
     );
   }
 }

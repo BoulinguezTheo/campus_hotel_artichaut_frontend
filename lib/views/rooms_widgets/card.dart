@@ -4,11 +4,10 @@ import 'package:campus_hotel_artichaut_frontend/utils/cta_button.dart';
 import 'package:flutter/material.dart';
 import 'package:scaled_size/scaled_size.dart';
 
-import '../../features/room_category_list/data/models/room_type.dart';
-
 class MyCard extends StatelessWidget {
   final RoomTypeEntity roomType;
-  const MyCard({required this.roomType});
+  VoidCallback onPressed;
+  MyCard({required this.roomType, required this.onPressed});
 
   @override
   Widget build(BuildContext context) {
@@ -60,8 +59,10 @@ class MyCard extends StatelessWidget {
                       children: [
                         Container(
                           margin: const EdgeInsets.only(top: 1.8, bottom: 0.0),
-                          child: const CallToActionButton(
-                              label: ConstantsApp.ROOMS_RESERVE),
+                          child: CallToActionButton(
+                              label: ConstantsApp.ROOMS_RESERVE,
+                            onPressed: onPressed,
+                          ),
                         ),
                         SizedBox(width: 5.vw),
                         Text(

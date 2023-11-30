@@ -2,14 +2,21 @@ import 'package:campus_hotel_artichaut_frontend/features/room_category_list/pres
 import 'package:campus_hotel_artichaut_frontend/features/room_category_list/presentation/bloc/remote_room_type_bloc.dart';
 import 'package:campus_hotel_artichaut_frontend/features/room_category_list/presentation/bloc/remote_room_type_state.dart';
 import 'package:campus_hotel_artichaut_frontend/services/service_locator.dart';
+import 'package:campus_hotel_artichaut_frontend/utils/constants.dart';
 import 'package:campus_hotel_artichaut_frontend/views/rooms_widgets/card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 
-class MyRoomTypeList extends StatelessWidget {
+class MyRoomTypeList extends StatefulWidget {
   const MyRoomTypeList({Key? key}) : super(key: key);
 
+  @override
+  State<MyRoomTypeList> createState() => _MyRoomTypeListState();
+}
+
+class _MyRoomTypeListState extends State<MyRoomTypeList> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<RemoteRoomTypeListBloc>(
@@ -30,7 +37,10 @@ class MyRoomTypeList extends StatelessWidget {
       if (state is RemoteRoomTypeDone) {
         return ListView.builder(
           itemBuilder: (context, index) {
-            return MyCard(roomType: state.roomTypeList![index]);
+            return MyCard(
+                roomType: state.roomTypeList![index],
+              onPressed: () => {GoRouter.of(context).go(ConstantsApp.RESERVATION_ROUTE)},
+            );
           },
           itemCount: state.roomTypeList!.length,
         );
