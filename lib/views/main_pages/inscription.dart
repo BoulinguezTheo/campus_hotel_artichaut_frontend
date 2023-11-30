@@ -135,6 +135,14 @@ class _InscriptionState extends State<Inscription> {
             CallToActionButtonLarge(
                 label: ConstantsApp.INSCRIPTION_BTN,
                 onPressed: onPressed),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+              child: Text(
+                'Déja inscrit ? Connectez vous',
+                    style: TextStyle(color: Theme.of(context).cardTheme?.color),
+
+              ),
+            ),
           ], //children
         )
         )
