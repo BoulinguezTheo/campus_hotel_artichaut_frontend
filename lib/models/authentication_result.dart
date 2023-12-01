@@ -1,4 +1,4 @@
-class InscriptionResult
+class AuthenticationResult
 {
   int id;
   String email;
@@ -9,9 +9,9 @@ class InscriptionResult
   String refreshToken;
   String tokenType;
 
-  InscriptionResult({required this.id, required this.email, required this.roles, required this.message, required this.status, required this.accessToken, required this.refreshToken, required this.tokenType});
-  factory InscriptionResult.fromJson(Map<String, dynamic> json){
-    return InscriptionResult(
+  AuthenticationResult({required this.id, required this.email, required this.roles, required this.message, required this.status, required this.accessToken, required this.refreshToken, required this.tokenType});
+  factory AuthenticationResult.fromJson(Map<String, dynamic> json){
+    return AuthenticationResult(
       id: json['id'],
       email: json["email"],
       roles: json["roles"],
