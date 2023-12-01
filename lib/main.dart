@@ -2,6 +2,7 @@ import 'package:campus_hotel_artichaut_frontend/features/room_category_list/pres
 import 'package:campus_hotel_artichaut_frontend/theme/theme.dart';
 import 'package:campus_hotel_artichaut_frontend/utils/constants.dart';
 import 'package:campus_hotel_artichaut_frontend/views/main_pages/account.dart';
+import 'package:campus_hotel_artichaut_frontend/views/main_pages/connexion.dart';
 import 'package:campus_hotel_artichaut_frontend/views/main_pages/homepage.dart';
 import 'package:campus_hotel_artichaut_frontend/views/init_app.dart';
 import 'package:campus_hotel_artichaut_frontend/views/main_pages/inscription.dart';
@@ -26,7 +27,7 @@ Future<void> main() async {
 class MyApp extends StatelessWidget {
   MyApp({super.key});
 
-  final GoRouter _router = GoRouter(
+  late final GoRouter _router = GoRouter(
       navigatorKey: _rootNavigatorKey,
       initialLocation: ConstantsApp.HOMEPAGE_ROUTE,
       routes: <RouteBase>[
@@ -58,6 +59,10 @@ class MyApp extends StatelessWidget {
               path: ConstantsApp.INSCRIPTION_ROUTE,
               builder: (context, state) => const Inscription(),
             ),
+            GoRoute(
+              path: ConstantsApp.CONNEXION_ROUTE,
+              builder: (context, state) => const Connexion(),
+            )
           ],
         )
       ]);

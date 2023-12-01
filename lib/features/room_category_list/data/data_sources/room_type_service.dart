@@ -4,7 +4,7 @@ import 'package:retrofit/retrofit.dart';
 import 'package:dio/dio.dart';
 part 'room_type_service.g.dart';
 
-@RestApi(baseUrl: ConstantsApp.BASE_URL_DEV)
+@RestApi(baseUrl: ConstantsApp.BASE_URL_PROD)
 abstract class RoomTypeService {
   factory RoomTypeService(Dio dio) = _RoomTypeService;
 

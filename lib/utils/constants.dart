@@ -4,6 +4,7 @@ class ConstantsApp {
   static const String ACCOUNT_ROUTE = "/account";
   static const String ROOM_LIST_ROUTE = "/rooms";
   static const String INSCRIPTION_ROUTE = "/users";
+  static const String CONNEXION_ROUTE = "/login";
 
   static const String HOMEPAGE_LABEL = "Accueil";
   static const String SEARCH_LABEL = "Réserver";
@@ -24,7 +25,8 @@ class ConstantsApp {
   static const String HINT_EMAIL = "Ex. john.doe@domain.com";
   static const String LABEL_PASSWORD = "Mot de passe";
   static const String HINT_PASSWORD = "Votre mot de passe";
-  static const String  INSCRIPTION_BTN = "S'inscrire";
+  static const String INSCRIPTION_BTN = "S'inscrire";
+  static const String CONNEXION_BTN = "Se connecter";
 
   static const String LOGO_ARTICHAUT_PATH = "assets/logo_favicon.svg";
   static const String LOBBY_PICTURE_PATH = "assets/photo_lobby.jpg";
@@ -39,5 +41,6 @@ class ConstantsApp {
   static const String DISCOVER_ELEGANCE_DESCRIPTION = "Niché dans un cadre luxuriant, notre hôtel propose une expérience unique pour les voyageurs exigeants. Avec 25 chambres standards, 5 chambres de luxe et 2 suites, nous offrons un choix d'hébergement pour tous les goûts. Chacune de nos chambres est conçue pour vous offrir un confort optimal et une atmosphère chaleureuse.";
 
   static const String BASE_URL_DEV = "http://localhost:8080";
+  static const String BASE_URL_PROD = "http://51.15.225.115/";
   static const String ROOM_TYPE_URL = "/room-type";
 }
