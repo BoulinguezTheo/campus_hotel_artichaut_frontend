@@ -54,6 +54,10 @@ class MyApp extends StatelessWidget {
               path: ConstantsApp.INSCRIPTION_ROUTE,
               builder: (context, state) => const Inscription(),
             ),
+            GoRoute(
+              path: ConstantsApp.INSCRIPTION_ROUTE,
+              builder: (context, state) => const Inscription(),
+            ),
           ],
         )
       ]);
