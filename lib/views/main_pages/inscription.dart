@@ -58,88 +58,97 @@ class _InscriptionState extends State<Inscription> {
 
   @override
   Widget build(BuildContext context) {
-    return Form(
-        key: _formKey,
-        child: SingleChildScrollView(
-            child: Column(
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const Center(
-              child: Text(
-                'Inscription',
-                style: TextStyle(
-                  fontSize: 30,
-                  fontWeight: FontWeight.w600,
-                  fontFamily: 'PlayfairDisplay',
-                  color: Colors.black,
-                ),
-              ),
-            ),
-            InputField(
-                label: ConstantsApp.LABEL_PRENOM,
-                hint: ConstantsApp.HINT_PRENOM,
-                icon: const Icon(Icons.person),
-                obscureText: false,
-                autocorrect: true,
-                enableSuggestions: true,
-                onSaved: (value) => onSaved(value, "firstname"),
-                field: "firstname"),
-            InputField(
-                label: ConstantsApp.LABEL_NOM,
-                hint: ConstantsApp.HINT_NOM,
-                icon: const Icon(Icons.person),
-                obscureText: false,
-                autocorrect: true,
-                enableSuggestions: true,
-                onSaved: (value) => onSaved(value, "lastname"),
-                field: "lastname"),
-            InputField(
-                label: ConstantsApp.LABEL_ADDRESS,
-                hint: ConstantsApp.HINT_ADDRESS,
-                icon: const Icon(Icons.add_location_rounded),
-                obscureText: false,
-                autocorrect: true,
-                enableSuggestions: true,
-                onSaved: (value) => onSaved(value, "address"),
-                field: "address"),
-            InputField(
-                label: ConstantsApp.LABEL_EMAIL,
-                hint: ConstantsApp.HINT_EMAIL,
-                icon: const Icon(Icons.email),
-                obscureText: false,
-                autocorrect: true,
-                enableSuggestions: true,
-                onSaved: (value) => onSaved(value, "email"),
-                field: "email"),
-            InputField(
-                label: ConstantsApp.LABEL_PASSWORD,
-                hint: ConstantsApp.HINT_PASSWORD,
-                icon: const Icon(Icons.password_outlined),
-                obscureText: true,
-                autocorrect: false,
-                enableSuggestions: false,
-                onSaved: (value) => onSaved(value, "password"),
-                field: "password"),
-            CallToActionButtonLarge(
-                label: ConstantsApp.INSCRIPTION_BTN, onPressed: onPressed),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-              child: Center(
-                child: GestureDetector(
-                  onTap: (){
-                    context.go(ConstantsApp.CONNEXION_ROUTE);
-                  },
-                  child: Text(
-                    'Déja inscrit ? Connectez vous',
-                    style: TextStyle(
-                      color: Theme.of(context).colorScheme.primary,
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 12.vh),
+        child: Form(
+            key: _formKey,
+            child: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Center(
+                      child: Text(
+                        'Inscription',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w600,
+                          fontFamily: 'PlayfairDisplay',
+                          color: Colors.black,
+                        ),
+                      ),
                     ),
-                  ),
-                ),
-              ),
-            ),
-          ], //children
-        )));
+                    InputField(
+                        label: ConstantsApp.LABEL_PRENOM,
+                        hint: ConstantsApp.HINT_PRENOM,
+                        icon: const Icon(Icons.person),
+                        obscureText: false,
+                        autocorrect: true,
+                        enableSuggestions: true,
+                        onSaved: (value) => onSaved(value, "firstname"),
+                        field: "firstname"),
+                    InputField(
+                        label: ConstantsApp.LABEL_NOM,
+                        hint: ConstantsApp.HINT_NOM,
+                        icon: const Icon(Icons.person),
+                        obscureText: false,
+                        autocorrect: true,
+                        enableSuggestions: true,
+                        onSaved: (value) => onSaved(value, "lastname"),
+                        field: "lastname"),
+                    InputField(
+                        label: ConstantsApp.LABEL_ADDRESS,
+                        hint: ConstantsApp.HINT_ADDRESS,
+                        icon: const Icon(Icons.add_location_rounded),
+                        obscureText: false,
+                        autocorrect: true,
+                        enableSuggestions: true,
+                        onSaved: (value) => onSaved(value, "address"),
+                        field: "address"),
+                    InputField(
+                        label: ConstantsApp.LABEL_EMAIL,
+                        hint: ConstantsApp.HINT_EMAIL,
+                        icon: const Icon(Icons.email),
+                        obscureText: false,
+                        autocorrect: true,
+                        enableSuggestions: true,
+                        onSaved: (value) => onSaved(value, "email"),
+                        field: "email"),
+                    InputField(
+                        label: ConstantsApp.LABEL_PASSWORD,
+                        hint: ConstantsApp.HINT_PASSWORD,
+                        icon: const Icon(Icons.password_outlined),
+                        obscureText: true,
+                        autocorrect: false,
+                        enableSuggestions: false,
+                        onSaved: (value) => onSaved(value, "password"),
+                        field: "password"),
+                    CallToActionButtonLarge(
+                        label: ConstantsApp.INSCRIPTION_BTN, onPressed: onPressed),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                      child: Center(
+                        child: GestureDetector(
+                          onTap: (){
+                            context.go(ConstantsApp.CONNEXION_ROUTE);
+                          },
+                          child: Text(
+                            'Déja inscrit ? Connectez vous',
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.primary,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ], //children
+                )
+            )
+        )
+    );
+
+
+
+
   }
 }

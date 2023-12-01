@@ -17,8 +17,10 @@ class Connexion extends StatefulWidget {
 
 class _ConnexionState extends State<Connexion> {
   final _formKey = GlobalKey<FormState>();
+
   late String email;
   late String password;
+
   void onSaved(value, field) {
     setState(() {
       if (field == "email") {
@@ -47,54 +49,63 @@ class _ConnexionState extends State<Connexion> {
         padding: EdgeInsets.symmetric(vertical: 12.vh),
         child: Form(
           key: _formKey,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Center(
-                child: Padding(
-                  padding: EdgeInsets.only(bottom: 3.vh),
-                  child: Text('Connexion',
-                      style: Theme.of(context).textTheme.titleLarge),
+          child: SingleChildScrollView(
+            child:Column(
+              mainAxisSize: MainAxisSize.max,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Center(
+                  child: Text(
+                    'Connexion',
+                    style: TextStyle(
+                      fontSize: 30,
+                      fontWeight: FontWeight.w600,
+                      fontFamily: 'PlayfairDisplay',
+                      color: Colors.black,
+                    ),
+                  ),
                 ),
-              ),
-              InputField(
-                  label: ConstantsApp.LABEL_EMAIL,
-                  hint: ConstantsApp.HINT_EMAIL,
-                  icon: Icon(Icons.email),
-                  obscureText: false,
-                  autocorrect: true,
-                  enableSuggestions: true,
-                  onSaved: (value) => onSaved(value, "email"),
-                  field: "email"),
-              InputField(
-                  label: ConstantsApp.LABEL_PASSWORD,
-                  hint: ConstantsApp.HINT_PASSWORD,
-                  icon: const Icon(Icons.password_outlined),
-                  obscureText: true,
-                  autocorrect: false,
-                  enableSuggestions: false,
-                  onSaved: (value) => onSaved(value, "password"),
-                  field: "password"),
-              CallToActionButtonLarge(
-                  label: ConstantsApp.CONNEXION_BTN, onPressed: onPressed),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                child: Center(
-                  child: GestureDetector(
-                    onTap: (){
-                      context.go(ConstantsApp.CONNEXION_ROUTE);
-                    },
-                    child: Text(
-                      'Déja inscrit ? Connectez vous',
-                      style: TextStyle(
-                        color: Theme.of(context).colorScheme.primary,
+                InputField(
+                    label: ConstantsApp.LABEL_EMAIL,
+                    hint: ConstantsApp.HINT_EMAIL,
+                    icon: Icon(Icons.email),
+                    obscureText: false,
+                    autocorrect: true,
+                    enableSuggestions: true,
+                    onSaved: (value) => onSaved(value, "email"),
+                    field: "email"),
+                InputField(
+                    label: ConstantsApp.LABEL_PASSWORD,
+                    hint: ConstantsApp.HINT_PASSWORD,
+                    icon: const Icon(Icons.password_outlined),
+                    obscureText: true,
+                    autocorrect: false,
+                    enableSuggestions: false,
+                    onSaved: (value) => onSaved(value, "password"),
+                    field: "password"),
+                CallToActionButtonLarge(
+                    label: ConstantsApp.CONNEXION_BTN, onPressed: onPressed),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+                  child: Center(
+                    child: GestureDetector(
+                      onTap: (){
+                        context.go(ConstantsApp.INSCRIPTION_ROUTE);
+                      },
+                      child: Text(
+                        'Pas de compte? Inscrivez vous',
+                        style: TextStyle(
+                          color: Theme.of(context).colorScheme.primary,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          )
+
+
         ));
   }
 }
