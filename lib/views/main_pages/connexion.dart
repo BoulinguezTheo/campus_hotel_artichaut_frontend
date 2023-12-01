@@ -9,8 +9,7 @@ import '../inscription_widgets/input_field.dart';
 import 'package:scaled_size/scaled_size.dart';
 
 class Connexion extends StatefulWidget {
-  final GoRouter router;
-  const Connexion({Key? key, required this.router}) : super(key: key);
+  const Connexion({Key? key}) : super(key: key);
 
   @override
   State<Connexion> createState() => _ConnexionState();

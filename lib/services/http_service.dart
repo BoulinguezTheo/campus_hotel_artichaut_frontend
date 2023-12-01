@@ -41,7 +41,7 @@ class HttpService
     String url = "http://10.0.2.2:8080/api/authentication/tokens";
     var data = jsonEncode(<String, String>{
       'email':email,
-      'password':password,
+      'password':password
     });
     final response = await http.post(
       Uri.parse(url),

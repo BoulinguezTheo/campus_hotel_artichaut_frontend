@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
             ),
             GoRoute(
               path: ConstantsApp.CONNEXION_ROUTE,
-              builder: (context, state) => Connexion(router: _router),
+              builder: (context, state) => const Connexion(),
             )
           ],
         )
